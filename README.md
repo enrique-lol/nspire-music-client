@@ -12,6 +12,8 @@
     - You can search for all instances of text in Atom by pressing
     `commant + shift + f` on Mac or `ctrl + shift + f` on WSL.
 1. Move into the new project and `git init`.
+
+
 1. Add all of the files in your project with the command `git add --all`.
       - **Note: This is the only time you should run this command!**
 1. Commit all of your files with the command `git commit`.
