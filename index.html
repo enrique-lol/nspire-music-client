@@ -12,6 +12,50 @@
       <script src="public/application.js" type="text/javascript" charset="utf-8" defer></script>
     </head>
     <body>
-      <h1>Browser Template</h1>
+      <!-- page 1 : login or sign up now intro page -->
+      <section class='page p1' id='page-1-parent-container'>
+        <section class='page p1' id='page-1'>
+          FIRST(1) page
+          <button id='next-from-p1'>Show NEXT page</button>
+          <form id='sign-up-form' class='form'>
+            <input type='text' name='email' placeholder="email">
+            <input type='password' name='password' placeholder="password">
+            <input type='password' name='password-comfirmation' placeholder="password, but again">
+            <button type='submit'>sign-UP</button>
+          </form>
+          <form id='sign-in-form' class='form'>
+            <input type='text' name='email' placeholder="email">
+            <input type='password' name='password' placeholder="password">
+            <button type='submit'>sign-IN</button>
+          </form>
+        </section>
+      </section>
+
+      <!-- page 2 : user profile with list of all user reviews -->
+      <section class='page p2' id='page-2-parent-container'>
+        <section class='page p2' id='page-2'>
+          SECOND(2) page
+          <button id='previous-from-p2'>Show PREVIOUS page</button>
+          <button id='next-from-p2'>Show NEXT page</button>
+        </section>
+      </section>
+
+      <!-- page 3 : draft one new review  -->
+      <section class='page p3' id='page-3-parent-container'>
+        <section class='page p3' id='page-3'>
+          THIRD(3) page
+          <button id='previous-from-p3'>Show PREVIOUS page</button>
+          <button id='next-from-p3'>Show NEXT page</button>
+        </section>
+      </section>
+
+      <!-- page 4 : one posted full review (detailed) -->
+      <section class='page p4' id='page-4-parent-container'>
+        <section class='page p4' id='page-4'>
+          FOURTH(4) page
+          <button id='previous-from-p4'>Show PREVIOUS page</button>
+        </section>
+      </section>
+
     </body>
 </html>

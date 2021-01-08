@@ -1,1 +1,16 @@
 @import '~bootstrap/scss/bootstrap';
+
+
+$all-background: #222;
+$font-color: #fff;
+
+
+
+.page {
+  background-color: $all-background;
+  color: $font-color;
+}
+
+body {
+  background-color: $all-background;
+}
