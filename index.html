@@ -12,48 +12,90 @@
       <script src="public/application.js" type="text/javascript" charset="utf-8" defer></script>
     </head>
     <body>
+      <nav id='navigation-bar'>
+        <h1>nSpire Music</h1>
+        <button id='settings-button'>Settings</button>
+        <button id='new-post-button'>New Post!</button>
+        <button id='home-button'>Home</button>
+      </nav>
       <!-- page 1 : login or sign up now intro page -->
-      <section class='page p1' id='page-1-parent-container'>
-        <section class='page p1' id='page-1'>
-          FIRST(1) page
-          <button id='next-from-p1'>Show NEXT page</button>
-          <form id='sign-up-form' class='form'>
-            <input type='text' name='email' placeholder="email">
-            <input type='password' name='password' placeholder="password">
-            <input type='password' name='password-comfirmation' placeholder="password, but again">
-            <button type='submit'>sign-UP</button>
+      <section class='page p1 intro-page' id='page-1-parent-container'>
+        <section class='page p1 intro-page' id='page-1'>
+
+          <div class='messages-div top-third'>
+          <h1>Welcome Page</h1>
+          Log in or Sign up
+          <h2 id='first-page-message'></h2>
+        </div>
+
+          <div class='description-and-signup-div left-third'>
+          <form id='sign-up-form' class='form sign-up-formy'>
+            <input type='text' name='credentials[email]' placeholder="email">
+            <input type='password' name='credentials[password]' placeholder="password">
+            <input type='password' name='credentials[password_confirmation]' placeholder="password, but again">
+            <input type='text' name='accountdata[bio]' placeholder="required: write a short bio for yourself...">
+            <button type='submit'>Create Account</button>
           </form>
-          <form id='sign-in-form' class='form'>
-            <input type='text' name='email' placeholder="email">
-            <input type='password' name='password' placeholder="password">
-            <button type='submit'>sign-IN</button>
+          <article class='intro-article'>
+          </article>
+        </div>
+
+        <div class='log-in-div right-third'>
+          <form id='log-in-form' class='form'>
+            <input type='text' name='credentials[email]' placeholder="email">
+            <input type='password' name='credentials[password]' placeholder="password">
+            <button type='submit'>Log in</button>
           </form>
+        </div>
         </section>
       </section>
 
       <!-- page 2 : user profile with list of all user reviews -->
-      <section class='page p2' id='page-2-parent-container'>
-        <section class='page p2' id='page-2'>
-          SECOND(2) page
-          <button id='previous-from-p2'>Show PREVIOUS page</button>
-          <button id='next-from-p2'>Show NEXT page</button>
+      <section class='page p2 home-page' id='page-2-parent-container'>
+        <section class='page p2 home-page' id='page-2'>
+          <h1 id='home-page-profile'></h1>
+          <h3 id='home-page-bio'></h3>
+          <h3 id='home-page-message'></h3>
+          user profile with own reviews.
         </section>
       </section>
 
-      <!-- page 3 : draft one new review  -->
-      <section class='page p3' id='page-3-parent-container'>
-        <section class='page p3' id='page-3'>
-          THIRD(3) page
-          <button id='previous-from-p3'>Show PREVIOUS page</button>
-          <button id='next-from-p3'>Show NEXT page</button>
+      <!-- page 3 : settings page  -->
+      <section class='page p3 settings-page' id='page-3-parent-container'>
+        <section class='page p3 settings-page' id='page-3'>
+          <div class='title-and-messages-div settings-title'>
+          <h1>Settings Page</h1>
+        </div>
+        <h2 id='settings-page-message'></h2>
+          settings where users can change password, update bio, and sign-OUT
+          <div class='change-bio-div'>
+            <h2>Update Profile Bio</h2>
+        <form class='change-bio-form'>
+          <input type='text' name='bio[new]' placeholder="update bio">
+          <input type='password' name='passwords[old]' placeholder="password">
+          <button type='submit'>Update</button>
+        </form>
+        </div>
+          <div class='change-pw-div'>
+            <h2>Change Password</h2>
+        <form class='change-pw-form'>
+          <input type='password' name='passwords[old]' placeholder="old password">
+          <input type='password' name='passwords[new]' placeholder="new password">
+          <button type='submit'>Confirm change</button>
+        </form>
+        </div>
+        <div class='sign-out-div'>
+          <h2>Sign Out</h2>
+          <button class='user-leave'>Sayonara</button>
+        </div>
         </section>
       </section>
 
       <!-- page 4 : one posted full review (detailed) -->
-      <section class='page p4' id='page-4-parent-container'>
-        <section class='page p4' id='page-4'>
-          FOURTH(4) page
-          <button id='previous-from-p4'>Show PREVIOUS page</button>
+      <section class='page p4 new-post-page' id='page-4-parent-container'>
+        <section class='page p4 new-post-page' id='page-4'>
+          <h1>New Post</h1>
+          page to write a new review
         </section>
       </section>
 
