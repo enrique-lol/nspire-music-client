@@ -13,7 +13,7 @@
     </head>
     <body>
       <nav id='navigation-bar'>
-        <h1>nSpire Music</h1>
+        <h1 id='pink-text'>nSpire Music</h1>
         <button id='settings-button'>Settings</button>
         <button id='new-post-button'>New Post!</button>
         <button id='home-button'>Home</button>
@@ -23,7 +23,7 @@
         <section class='page p1 intro-page' id='page-1'>
 
           <div class='messages-div top-third'>
-          <h1>Welcome Page</h1>
+          <h1 id='pink-text'>Welcome Page</h1>
           Log in or Sign up
           <h2 id='first-page-message'></h2>
         </div>
@@ -58,9 +58,11 @@
           <h3 id='home-page-message'></h3>
           user profile with all app  reviews.
           <button id='temporary-get-button'>Get it</button>
+          <section id='reviews-parent'>
           <section id='all-reviews-container'>
 
           </section>
+        </section>
         </section>
       </section>
 
@@ -101,8 +103,11 @@
           <h1>New Post</h1>
           page to write a new review
           <form class='new-post-form'>
+          <input type='text' name='review[project]' placeholder='Song, Album, or compilation'>
+          <input type='text' name='review[artist]' placeholder='Artist'>
           <input type='text' name='review[title]' placeholder='Headline: title of your review'>
           <input type='text' name='review[text]' placeholder='Love it or hate it? why?...'>
+          <input type='text' name='review[image]' placeholder='image url (from Imgur)'>
           <button type='submit'>Create Post</button>
         </form>
         </section>

@@ -8,7 +8,7 @@ const appReset = function() {
   $('#navigation-bar').hide()
   $('.intro-page').show()
   $('form').trigger("reset")
-  // $('#all-reviews-container').text('')
+  $('#all-reviews-container').text('')
 }
 // after sign-IN, show second page, or (first auth page)
 const toHome = function() {

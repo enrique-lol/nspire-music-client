@@ -91,9 +91,22 @@ const getAllSuccess = function (response) {
   allReviews.forEach((item, i) => {
   $('#all-reviews-container').append(
     "<div class='single-review'> " +
-    "Title: " + item.title+
-    "  Review: " + item.text +
-    "</div>"
+    // add image to html with styling
+    "<img src=" + ' " ' + item.image + ' " ' +
+    "style='width:125px;height:125px;'"+ ">" +
+    // add project name + "by" + artist
+    "<h4 id='project-name'>" + item.project + " by " +
+    item.artist + "</h4>" +
+    // add review TITLE ONLY
+    "<p id='review-title'>" + item.title + "</p>" +
+    // close div (with class of single-review)
+    "<div>"
+
+    // "<h5 id='review-title'>" + item.title + "</h5>" +
+    // "<p id='review-text'>" + item.text + "</p>" +
+    // "<img src=" + ' " ' + item.image + ' " ' +
+    // "style='width:125px;height:125px;'"+ ">" +
+    // "</div>"
   )
   });
   // $('home-page-message').text('HELLO WORLD LOL')
