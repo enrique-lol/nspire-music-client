@@ -1,24 +1,24 @@
 @import '~bootstrap/scss/bootstrap';
 
 
-$all-background: #222;
-$font-color: #fff;
+$slate: #222;
+$white: #fff;
 
 
 
 .page {
-  background-color: $all-background;
-  color: $font-color;
+  background-color: $slate;
+  color: $white;
 }
 
 body {
-  background-color: $all-background;
+  background-color: $slate;
 }
 
 nav {
-  color: $font-color;
+  color: $white;
 }
 
 .single-review {
-  border: 2px solid $font-color;
+  border: 2px solid $white;
 }

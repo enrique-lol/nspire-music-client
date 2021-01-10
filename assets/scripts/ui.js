@@ -79,37 +79,36 @@ const reviewFailure = function() {
   $('#new-post-page-message').text('oopsie review-machine broke.')
 }
 /////////////////////////////////////////////////////
+/////////////////////////////////////////////////////
+/////////////////////////////////////////////////////
 // below: get all review success and fail responses
-const testFunction = function () {
-  console.log('test function in ui works')
-
+const getAllSuccess = function (response) {
   // console.log(response)
   // // console.log(response.reviews[1].title)
-  // const allReviews = response.reviews
   // // console.log(allReviews)
-  //
-  //
-  // allReviews.forEach((item, i) => {
-  // $('#all-reviews-container').append(
-  //   "<div class='single-review'> " +
-  //   "Title: " + item.title+
-  //   "  Text: " + item.text +
-  //   "</div>"
-  // )
-  // });
+  const allReviews = response.reviews
+
+  allReviews.forEach((item, i) => {
+  $('#all-reviews-container').append(
+    "<div class='single-review'> " +
+    "Title: " + item.title+
+    "  Review: " + item.text +
+    "</div>"
+  )
+  });
   // $('home-page-message').text('HELLO WORLD LOL')
 }
-const allReviewFail = function() {
+const getAllFail = function() {
   console.log('cannot GET all reviews rn.')
 }
 ////////////////////////////////////////////
-const fileConnectionSuccess = function(response) {
-  console.log('everything works!', response)
-}
-///////////////////////////////////////////
-const fileConnectionFailure = function(){
-  console.log('files connect, but theres an error')
-}
+// const  = function(response) {
+//   console.log('everything works!', response)
+// }
+// ///////////////////////////////////////////
+// const fileConnectionFailure = function(){
+//   console.log('files connect, but theres an error')
+// }
 
 module.exports = {
   signUpDub ,
@@ -124,8 +123,6 @@ module.exports = {
   changeBioEpicFail ,
   reviewSuccess ,
   reviewFailure ,
-  testFunction ,
-  allReviewFail ,
-  fileConnectionSuccess ,
-  fileConnectionFailure
-}
+  getAllSuccess ,
+  getAllFail ,
+  }

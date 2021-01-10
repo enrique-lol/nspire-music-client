@@ -28,9 +28,8 @@ $(() => {
   $('.change-bio-form').on('submit', userEvents.changeBio)
 
   // create a review/post listener
-  $('.new-post-form').on('submit', contentEvents.newReview)
-  $('#temporary-get-button').on('click', contentEvents.getAllAppReviews)
-  $('#ui-button').on('click', contentEvents.fetchAllReviews)
+  $('.new-post-form').on('submit', userEvents.newReview)
+  $('#temporary-get-button').on('click', userEvents.fetchAllReviews)
 
 
 

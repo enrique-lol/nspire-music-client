@@ -53,6 +53,28 @@ const changeBio = function(event) {
     .then(ui.changeBioDub)
     .catch(ui.changeBioEpicFail)
 }
+//////////////////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////////////
+// CONTENTEVENT FUNCTION
+const newReview = function(event) {
+  event.preventDefault()
+  const data = (getFormFields(event.target))
+  // console.log('new events page works!!1', data)
+  api.newReview(data)
+    .then(ui.reviewSuccess)
+    .catch(ui.reviewFailure)
+}
+/////////////////////////////////////////////
+// CONTENTEVENT FUNCTION
+const fetchAllReviews = function(event) {
+  event.preventDefault()
+  console.log('you made it to events file')
+  api.getReviewsRequest()
+    .then(ui.getAllSuccess)
+    .catch(ui.getAllFail)
+}
+/////////////////////////////////////////////
+
 
 
 
@@ -61,5 +83,8 @@ module.exports = {
   userSignIn ,
   userLeaveApp ,
   changePw ,
-  changeBio
+  changeBio ,
+  newReview ,
+  fetchAllReviews ,
+  newReview
 }
