@@ -32,7 +32,7 @@ nav {
   border: 4px solid $coral;
   border-radius: 20px;
   width: 48%;
-  margin-bottom: 60px;
+  margin-top: 60px;
 }
 
 // section {
@@ -52,5 +52,56 @@ nav {
   flex-wrap: wrap;
   justify-content: space-between;
   // border: 2px solid $white;
-  width: 70%;
+  width: 88%;
+}
+
+
+
+//////////////////////
+
+.intro-page {
+  // border: 2px solid $red;
+  height: 709px;
+}
+
+// .intro-top-third {
+//   border: 2px solid $white;
+// }
+//
+// .intro-left-third {
+//   border: 2px solid $slate;
+// }
+//
+// .intr-right-third {
+//   border: 2px solid $red;
+// }
+
+.intro-top-half {
+  border: 2px solid $white;
+  height: 20%;
+}
+
+.intro-bottom-half {
+  border: 2px solid $red;
+  display: flex;
+}
+
+.intro-left-third {
+  width: 50%;
+}
+
+.intro-right-third {
+  width: 50%;
+}
+
+.app-title {
+  font-family: 'Josefin Sans', serif;
+}
+
+.nunito {
+  font-family: 'Nunito Sans', sans-serif;
+}
+
+p {
+  font-size: 20px;
 }

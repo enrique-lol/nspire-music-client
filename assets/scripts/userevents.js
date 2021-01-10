@@ -66,14 +66,25 @@ const newReview = function(event) {
 }
 /////////////////////////////////////////////
 // CONTENTEVENT FUNCTION
-const fetchAllReviews = function(event) {
-  event.preventDefault()
+const fetchAllReviews = function() {
+  // event.preventDefault()
   console.log('you made it to events file')
   api.getReviewsRequest()
     .then(ui.getAllSuccess)
     .catch(ui.getAllFail)
 }
 /////////////////////////////////////////////
+const toHome = function() {
+  $('.page').hide()
+  $('#navigation-bar').show()
+  $('.home-page').show()
+  $('#home-page-profile').text(store.user.email)
+  $('#home-page-bio').text(store.user.bio)
+  $('form').trigger("reset")
+  api.getReviewsRequest()
+    .then(ui.getAllSuccess)
+    .catch(ui.getAllFail)
+}
 
 
 
@@ -86,5 +97,6 @@ module.exports = {
   changeBio ,
   newReview ,
   fetchAllReviews ,
-  newReview
+  newReview ,
+  toHome
 }

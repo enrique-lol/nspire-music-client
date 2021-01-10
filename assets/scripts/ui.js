@@ -2,6 +2,7 @@
 const store = require('./store.js')
 const pageEvents = require('./pageEvents')
 const contentEvents = require('./contentEvents.js')
+const userevents = require('./userevents.js')
 
 ////////////////////////////////////////////////////////
 // Below: sign UP success (dub) and fail (epic fail) responses
@@ -23,6 +24,7 @@ const signInDub = function (response) {
   pageEvents.toHome()
   $('form').trigger("reset")
   $('#home-page-message').text('')
+  // userevents.fetchAllReviews()
   // console.log(store.user)
 
 }
@@ -86,6 +88,7 @@ const getAllSuccess = function (response) {
   // console.log(response)
   // // console.log(response.reviews[1].title)
   // // console.log(allReviews)
+  console.log('this thing is buggin out')
   const allReviews = response.reviews
 
   allReviews.forEach((item, i) => {

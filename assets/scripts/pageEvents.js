@@ -1,6 +1,7 @@
 'use strict'
 const store = require('./store.js')
-const contentEvents = require('./contentEvents.js')
+const api = require('./userApi.js')
+const ui = require('./ui.js')
 
 // on load, or when signig out, app will reset
 const appReset = function() {
@@ -18,6 +19,9 @@ const toHome = function() {
   $('#home-page-profile').text(store.user.email)
   $('#home-page-bio').text(store.user.bio)
   $('form').trigger("reset")
+  api.getReviewsRequest()
+    .then(ui.getAllSuccess)
+    .catch(ui.getAllFail)
 }
 // whenever sign-in, nav shows with 'settings' button:
 // these are settings to change pw, change bio, log out

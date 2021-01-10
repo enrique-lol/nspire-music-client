@@ -10,10 +10,23 @@
       <!-- Do not add `script` tags-->
       <script src="public/vendor.js" type="text/javascript" charset="utf-8" defer></script>
       <script src="public/application.js" type="text/javascript" charset="utf-8" defer></script>
+
+      <style>
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,700;1,600;1,700&display=swap');
+</style>
+
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Dosis:wght@500&family=Josefin+Sans:ital,wght@0,400;0,700;1,600;1,700&display=swap');
+</style>
+
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Dosis:wght@500&family=Josefin+Sans:ital,wght@0,400;0,700;1,600;1,700&family=Nunito+Sans:wght@400;600&display=swap');
+</style>
+
     </head>
     <body>
       <nav id='navigation-bar'>
-        <h1 id='pink-text'>nSpire Music</h1>
+        <h1 id='pink-text' class='app-title'>nSpire Music</h1>
         <button id='settings-button'>Settings</button>
         <button id='new-post-button'>New Post!</button>
         <button id='home-button'>Home</button>
@@ -22,13 +35,16 @@
       <section class='page p1 intro-page' id='page-1-parent-container'>
         <section class='page p1 intro-page' id='page-1'>
 
-          <div class='messages-div top-third'>
-          <h1 id='pink-text'>Welcome Page</h1>
-          Log in or Sign up
+        <div class='intro-top-half'>
+          <div class='messages-div intro-top-third'>
+          <h1 id='pink-text' class='app-title'>Welcome Page</h1>
+          <p class='nunito'>Log in or Sign up</p>
           <h2 id='first-page-message'></h2>
         </div>
+      </div>
 
-          <div class='description-and-signup-div left-third'>
+      <div class='intro-bottom-half'>
+          <div class='description-and-signup-div intro-left-third'>
           <form id='sign-up-form' class='form sign-up-formy'>
             <input type='text' name='credentials[email]' placeholder="email">
             <input type='password' name='credentials[password]' placeholder="password">
@@ -40,13 +56,14 @@
           </article>
         </div>
 
-        <div class='log-in-div right-third'>
+        <div class='log-in-div intro-right-third'>
           <form id='log-in-form' class='form'>
             <input type='text' name='credentials[email]' placeholder="email">
             <input type='password' name='credentials[password]' placeholder="password">
             <button type='submit'>Log in</button>
           </form>
         </div>
+      </div>
         </section>
       </section>
 
