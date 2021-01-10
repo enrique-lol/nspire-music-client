@@ -98,7 +98,7 @@ const getAllSuccess = function (response) {
     "<img src=" + ' " ' + item.image + ' " ' +
     "style='width:125px;height:125px;'"+ ">" +
     // add project name + "by" + artist
-    "<h4 id='project-name'>" + item.project + " by " +
+    "<h3 id='project-name'>" + item.project + " by " +
     item.artist + "</h4>" +
     // add review TITLE ONLY
     "<p id='review-title'>" + item.title + "</p>" +
