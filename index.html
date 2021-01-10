@@ -50,13 +50,18 @@
         </section>
       </section>
 
-      <!-- page 2 : user profile with list of all user reviews -->
+      <!-- page 2 : user profile with list of all app reviews -->
       <section class='page p2 home-page' id='page-2-parent-container'>
         <section class='page p2 home-page' id='page-2'>
           <h1 id='home-page-profile'></h1>
           <h3 id='home-page-bio'></h3>
           <h3 id='home-page-message'></h3>
-          user profile with own reviews.
+          user profile with all app  reviews.
+          <button id='temporary-get-button'>Get it</button>
+          <button id='ui-button'>TEST FILE CONNECTION (get all reviews)</button>
+          <section id='all-reviews-container'>
+
+          </section>
         </section>
       </section>
 
@@ -91,11 +96,16 @@
         </section>
       </section>
 
-      <!-- page 4 : one posted full review (detailed) -->
+      <!-- page 4 : write a full review -->
       <section class='page p4 new-post-page' id='page-4-parent-container'>
         <section class='page p4 new-post-page' id='page-4'>
           <h1>New Post</h1>
           page to write a new review
+          <form class='new-post-form'>
+          <input type='text' name='review[title]' placeholder='Headline: title of your review'>
+          <input type='text' name='review[text]' placeholder='Love it or hate it? why?...'>
+          <button type='submit'>Create Post</button>
+        </form>
         </section>
       </section>
 

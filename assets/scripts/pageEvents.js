@@ -1,11 +1,14 @@
 'use strict'
 const store = require('./store.js')
+const contentEvents = require('./contentEvents.js')
 
 // on load, or when signig out, app will reset
 const appReset = function() {
   $('.page').hide()
   $('#navigation-bar').hide()
   $('.intro-page').show()
+  $('form').trigger("reset")
+  // $('#all-reviews-container').text('')
 }
 // after sign-IN, show second page, or (first auth page)
 const toHome = function() {
@@ -14,6 +17,7 @@ const toHome = function() {
   $('.home-page').show()
   $('#home-page-profile').text(store.user.email)
   $('#home-page-bio').text(store.user.bio)
+  $('form').trigger("reset")
 }
 // whenever sign-in, nav shows with 'settings' button:
 // these are settings to change pw, change bio, log out
@@ -21,26 +25,28 @@ const toSettings = function() {
   $('.page').hide()
   $('#navigation-bar').show()
   $('.settings-page').show()
+  $('form').trigger("reset")
 }
 // whenever signed-in, nav shows with 'new post' button
 const toNewPost = function() {
   $('.page').hide()
   $('#navigation-bar').show()
   $('.new-post-page').show()
+  $('form').trigger("reset")
 }
 
 
 module.exports = {
-  // nextFromPageOne,
+  appReset ,
+  toHome,
+  toSettings,
+  toNewPost
+  // , nextFromPageOne,
   // previousFromPageTwo ,
   // nextFromPageTwo ,
   // previousFromPageThree ,
   // nextFromPageThree ,
   // previousFromPageFour ,
-  appReset ,
-  toHome,
-  toSettings,
-  toNewPost
 }
 
 

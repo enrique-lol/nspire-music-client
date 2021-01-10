@@ -53,6 +53,28 @@ const changeBioRequest = function(data) {
   })
 }
 //////////////////////////////////////////////
+const newReview = function (data) {
+  return $.ajax({
+    url: config.apiUrl + '/reviews',
+    method: 'POST',
+    data,
+    headers: {
+      Authorization: 'Bearer ' + store.user.token
+    }
+  })
+}
+////////////////////////////////////////////////
+const getReviewsRequest = function() {
+  console.log('the api function works')
+  return $.ajax({
+    url: config.apiUrl + '/reviews',
+    method: 'GET',
+    headers: {
+      Authorization: 'Bearer ' + store.user.token
+    }
+  })
+}
+/////////////////////////////////////////////
 
 
 
@@ -61,5 +83,7 @@ module.exports = {
   signInRequest ,
   leaveRequest ,
   changePwRequest ,
-  changeBioRequest
+  changeBioRequest ,
+  newReview ,
+  getReviewsRequest
 }

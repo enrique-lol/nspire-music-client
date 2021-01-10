@@ -1,6 +1,7 @@
 'use strict'
 const store = require('./store.js')
 const pageEvents = require('./pageEvents')
+const contentEvents = require('./contentEvents.js')
 
 ////////////////////////////////////////////////////////
 // Below: sign UP success (dub) and fail (epic fail) responses
@@ -21,7 +22,8 @@ const signInDub = function (response) {
   // console.log('u made it ui, bro', store.user)
   pageEvents.toHome()
   $('form').trigger("reset")
-  // console.log(store.user.bio)
+  $('#home-page-message').text('')
+  // console.log(store.user)
 
 }
 const signInEpicFail = function() {
@@ -50,7 +52,7 @@ const changePwEpicFail = function() {
   $('#settings-page-message').text("su'm not right")
 }
 /////////////////////////////////////////////////////
-// below: Sign OUT success (dub) and fail (epic fail) responses
+// below: bio update success (dub) and fail (epic fail) responses
 const changeBioDub = function(response) {
   // console.log('easy dubs')
   console.log(response)
@@ -63,7 +65,51 @@ const changeBioEpicFail = function() {
   console.log('bio fumbled')
 }
 /////////////////////////////////////////////////////
+// below: New review success and fail responses
+const reviewSuccess = function(response) {
+  console.log('easy dubs')
+  // console.log(response)
+  pageEvents.toHome()
+  $('form').trigger("reset")
+  $('#new-post-page-message').text('')
+  $('#home-page-message').text('Your review successfully uploaded!')
+}
+const reviewFailure = function() {
+  // console.log('post fumbled')
+  $('#new-post-page-message').text('oopsie review-machine broke.')
+}
+/////////////////////////////////////////////////////
+// below: get all review success and fail responses
+const testFunction = function () {
+  console.log('test function in ui works')
 
+  // console.log(response)
+  // // console.log(response.reviews[1].title)
+  // const allReviews = response.reviews
+  // // console.log(allReviews)
+  //
+  //
+  // allReviews.forEach((item, i) => {
+  // $('#all-reviews-container').append(
+  //   "<div class='single-review'> " +
+  //   "Title: " + item.title+
+  //   "  Text: " + item.text +
+  //   "</div>"
+  // )
+  // });
+  // $('home-page-message').text('HELLO WORLD LOL')
+}
+const allReviewFail = function() {
+  console.log('cannot GET all reviews rn.')
+}
+////////////////////////////////////////////
+const fileConnectionSuccess = function(response) {
+  console.log('everything works!', response)
+}
+///////////////////////////////////////////
+const fileConnectionFailure = function(){
+  console.log('files connect, but theres an error')
+}
 
 module.exports = {
   signUpDub ,
@@ -75,5 +121,11 @@ module.exports = {
   changePwDub ,
   changePwEpicFail ,
   changeBioDub ,
-  changeBioEpicFail
+  changeBioEpicFail ,
+  reviewSuccess ,
+  reviewFailure ,
+  testFunction ,
+  allReviewFail ,
+  fileConnectionSuccess ,
+  fileConnectionFailure
 }
