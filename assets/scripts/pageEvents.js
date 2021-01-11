@@ -26,9 +26,12 @@ const toHome = function() {
   $('#navigation-bar').show()
   $('.home-page').show()
   $('#home-page-profile').text(store.user.email)
-  $('#home-page-bio').text(store.user.avi)
-  $('#home-page-avi').append("<img src=" + ' "' + store.user.bio + '" ' +
+  $('#home-page-bio').text(store.user.bio)
+  $('#home-page-avi').append("<img class='pfp' src=" + ' "' + store.user.avi + '" ' +
   "style='width:125px;height:125px;'"+ ">")
+  // console.log('Bio text: ', store.user.bio)
+  // console.log('===========================')
+  // console.log('pfp URL: ', store.user.avi)
 
 
 

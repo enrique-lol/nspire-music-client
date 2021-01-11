@@ -65,7 +65,7 @@ const newReview = function (data) {
 }
 ////////////////////////////////////////////////
 const getReviewsRequest = function() {
-  console.log('the api function works')
+  console.log('the api GET function is firing!')
   return $.ajax({
     url: config.apiUrl + '/reviews',
     method: 'GET',
