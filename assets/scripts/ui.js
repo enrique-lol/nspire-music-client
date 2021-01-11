@@ -13,7 +13,7 @@ const signUpDub = function(response) {
   $('#first-page-message').text('Account created! Log in.')
 }
 const signUpEpicFail = function() {
-  $('#first-page-message').text('ERROR: uh oh. stinky. Try again.')
+  $('#first-page-message').text('ERROR: uh oh. stinky. Try again (fill all forms).')
 }
 ///////////////////////////////////////////////////////
 // below: sign IN success (dub) and fail (epic fail) responses
@@ -66,6 +66,21 @@ const changeBioDub = function(response) {
 const changeBioEpicFail = function() {
   console.log('bio fumbled')
 }
+/////////////////////////////////////////////////////
+// below: avi update success (dub) and fail (epic fail) responses
+const changeAviDub = function(response) {
+  // console.log('easy dubs')
+  console.log(response)
+  pageEvents.toHome()
+  $('form').trigger("reset")
+  $('#settings-page-message').text('')
+  $('#home-page-message').text('Profile Picture successfully changed!')
+}
+const changeAviEpicFail = function() {
+  console.log('avi fumbled')
+}
+
+
 /////////////////////////////////////////////////////
 // below: New review success and fail responses
 const reviewSuccess = function(response) {
@@ -137,6 +152,8 @@ module.exports = {
   changePwEpicFail ,
   changeBioDub ,
   changeBioEpicFail ,
+  changeAviDub ,
+  changeAviEpicFail ,
   reviewSuccess ,
   reviewFailure ,
   getAllSuccess ,

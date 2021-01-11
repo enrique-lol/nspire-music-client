@@ -53,6 +53,15 @@ const changeBio = function(event) {
     .then(ui.changeBioDub)
     .catch(ui.changeBioEpicFail)
 }
+////////////////////////////////////////////////////////////////////////
+const changeAvi = function(event) {
+  event.preventDefault()
+  const data = getFormFields(event.target)
+  // console.log(data)
+  api.changeAviRequest(data)
+    .then(ui.changeAviDub)
+    .catch(ui.changeAviEpicFail)
+}
 //////////////////////////////////////////////////////////////////////
 //////////////////////////////////////////////////////////////////////
 // CONTENTEVENT FUNCTION
@@ -95,6 +104,7 @@ module.exports = {
   userLeaveApp ,
   changePw ,
   changeBio ,
+  changeAvi,
   newReview ,
   fetchAllReviews ,
   newReview ,

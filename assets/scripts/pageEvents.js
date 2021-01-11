@@ -29,13 +29,12 @@ const toHome = function() {
   $('#home-page-bio').text(store.user.bio)
   $('#home-page-avi').append("<img class='pfp' src=" + ' "' + store.user.avi + '" ' +
   "style='width:125px;height:125px;'"+ ">")
+  $('#home-button').hide()
+  $('#new-post-button').show()
+  $('#settings-button').show()
   // console.log('Bio text: ', store.user.bio)
   // console.log('===========================')
   // console.log('pfp URL: ', store.user.avi)
-
-
-
-
   $('form').trigger("reset")
   api.getReviewsRequest()
     .then(ui.getAllSuccess)
@@ -48,6 +47,9 @@ const toSettings = function() {
   $('#navigation-bar').show()
   $('.settings-page').show()
   $('form').trigger("reset")
+  $('#settings-button').hide()
+  $('#home-button').show()
+  $('#new-post-button').show()
 }
 // whenever signed-in, nav shows with 'new post' button
 const toNewPost = function() {
@@ -55,6 +57,9 @@ const toNewPost = function() {
   $('#navigation-bar').show()
   $('.new-post-page').show()
   $('form').trigger("reset")
+  $('#new-post-button').hide()
+  $('#home-button').show()
+  $('#settings-button').show()
 }
 
 

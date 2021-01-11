@@ -27,6 +27,7 @@ $(() => {
   // update event listeners
   $('.change-pw-form').on('submit', userEvents.changePw)
   $('.change-bio-form').on('submit', userEvents.changeBio)
+  $('.change-avi-form').on('submit', userEvents.changeAvi)
 
   // create a review/post listener
   $('.new-post-form').on('submit', userEvents.newReview)

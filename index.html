@@ -71,6 +71,7 @@
               <li>Ability to like and comment on a post</li>
 	             <li>Connect with friends and musicians by 'following' them</li>
                <li>Rank your favorite reviewed music to generate an "nSpire Board"</li>
+               <li>Full mobile accessibility</li>
                <li>Connect your Spotify account to stream music on nSpire with Spotify Web Widgets!</li>
 
                <!-- <img src="https://i.imgur.com/uyFosTE.png" style='width:180px;height:250px;' >
@@ -111,7 +112,7 @@
             <input type='text' name='credentials[email]' placeholder="email">
           </div>
           <div class='signup-form-child'>
-            <input type='password' name='credentials[password]' placeholder="password">
+            <input type='password' name='credentials[password]' placeholder="UNIQUE password">
           </div>
           <div class='signup-form-child'>
             <input type='password' name='credentials[password_confirmation]' placeholder="password, but again">
@@ -120,7 +121,7 @@
             <input type='text' name='accountdata[bio]' class='bio-entry' placeholder="required: write a short bio for yourself...">
           </div>
           <div class='signup-form-child'>
-            <input type='text' name='accountdata[avi]'  placeholder="profile picture url">
+            <input type='text' name='accountdata[avi]'  placeholder="pfp URL from Imgur">
           </div>
 
 
@@ -176,6 +177,16 @@
           <button type='submit'>Update</button>
         </form>
         </div>
+        <!-- lol -->
+        <div class='change-avi-div dark-blue-font'>
+          <h2>Update Profile Picture</h2>
+      <form class='change-avi-form'>
+        <input type='text' name='avi[new]' placeholder="URL from Imgur">
+        <input type='password' name='passwords[old]' placeholder="password">
+        <button type='submit'>Update</button>
+      </form>
+      </div>
+      <!-- lol -->
           <div class='change-pw-div dark-blue-font'>
             <h2>Change Password</h2>
         <form class='dark-blue-font change-pw-form'>

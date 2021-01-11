@@ -52,6 +52,17 @@ const changeBioRequest = function(data) {
     }
   })
 }
+///////////////////////////////////////////////
+const changeAviRequest = function(data) {
+  return $.ajax({
+    url: config.apiUrl + '/change-avi',
+    method: 'PATCH' ,
+    data ,
+    headers: {
+      Authorization: 'Bearer ' + store.user.token
+    }
+  })
+}
 //////////////////////////////////////////////
 const newReview = function (data) {
   return $.ajax({
@@ -84,6 +95,7 @@ module.exports = {
   leaveRequest ,
   changePwRequest ,
   changeBioRequest ,
+  changeAviRequest ,
   newReview ,
   getReviewsRequest
 }
