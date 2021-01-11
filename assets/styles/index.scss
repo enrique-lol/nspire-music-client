@@ -79,9 +79,9 @@ nav {
   height: 709px;
 }
 
-// .intro-top-third {
-//   border: 2px solid $white;
-// }
+.intro-top-third {
+  // border: 2px solid $white;
+  }
 //
 // .intro-left-third {
 //   border: 2px solid $slate;
@@ -105,6 +105,7 @@ nav {
   width: 50%;
   // border: 3px solid $babyBlue;
   display: flex;
+  align-items: center;
   border-right: 1px solid $darkGreen;
 }
 
@@ -132,7 +133,18 @@ nav {
 
 .app-title {
   font-family: 'Josefin Sans', serif;
+  text-align: center;
+  margin-top: 2%;
 }
+
+#first-page-message {
+  text-align: center;
+}
+
+.intro-art-title {
+  text-align: center;
+}
+
 
 .nunito {
   font-family: 'Nunito Sans', sans-serif;
@@ -214,6 +226,11 @@ input {
 }
 
 
+.login-form-child {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 
 
 
@@ -228,10 +245,9 @@ input {
 
 
 
-
-
-
-
+//////////////////////////
+/// USER PROFILE PICTURE///
+///////////////////////////
 
 
 

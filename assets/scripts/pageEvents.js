@@ -22,10 +22,17 @@ const queueSignUp = function() {
 // after sign-IN, show second page, or (first auth page)
 const toHome = function() {
   $('.page').hide()
+  $('#home-page-avi').text('')
   $('#navigation-bar').show()
   $('.home-page').show()
   $('#home-page-profile').text(store.user.email)
-  $('#home-page-bio').text(store.user.bio)
+  $('#home-page-bio').text(store.user.avi)
+  $('#home-page-avi').append("<img src=" + ' "' + store.user.bio + '" ' +
+  "style='width:125px;height:125px;'"+ ">")
+
+
+
+
   $('form').trigger("reset")
   api.getReviewsRequest()
     .then(ui.getAllSuccess)
