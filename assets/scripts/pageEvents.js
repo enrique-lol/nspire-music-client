@@ -8,8 +8,16 @@ const appReset = function() {
   $('.page').hide()
   $('#navigation-bar').hide()
   $('.intro-page').show()
+  $('.sign-up-formy').hide()
+  $('.s-u-f-button').show()
+  $('.intro-article').show()
   $('form').trigger("reset")
   $('#all-reviews-container').text('')
+}
+
+const queueSignUp = function() {
+  $('.s-u-f-button').hide()
+  $('.sign-up-formy').show()
 }
 // after sign-IN, show second page, or (first auth page)
 const toHome = function() {
@@ -42,6 +50,7 @@ const toNewPost = function() {
 
 module.exports = {
   appReset ,
+  queueSignUp ,
   toHome,
   toSettings,
   toNewPost

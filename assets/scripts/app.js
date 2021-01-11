@@ -17,6 +17,7 @@ $(() => {
   $('#sign-up-form').on('submit', userEvents.newSignUp)
   $('#log-in-form').on('submit', userEvents.userSignIn)
   $('.user-leave').on('click', userEvents.userLeaveApp)
+  $('.s-u-f-button').on('click', pageEvents.queueSignUp)
 
   // app navigation
   $('#settings-button').on('click', pageEvents.toSettings)

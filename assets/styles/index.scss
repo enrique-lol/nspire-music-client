@@ -4,30 +4,36 @@
 $slate: #222;
 $black: #000;
 $white: #fff;
-$red: #ff2d00;
+$red: #FF0000;
+///////////////
 $blue: #1B5AA0;
+$darkGreen: #477B05;
+/////////////
 $darkTeal: #385E67;
 $coral: #FFA2F1;
 $chocolateBrown: #644207;
+///////////////////////
 $babyBlue: #7692B1;
+$lightGreen: #A7C481;
+/////////////////////
 $darkblue: #6EB1D5;
 $reviewsContainer: #7A90A8;
 
 #accent-color {
-  color: $blue;
+  color: $darkGreen;
 }
 
 #project-name {
-  color: $blue;
+  color: $darkGreen;
 }
 
 .page {
-  background-color: $babyBlue;
+  background-color: $lightGreen;
   color: $black;
 }
 
 body {
-  background-color: $babyBlue;
+  background-color: $lightGreen;
 }
 
 nav {
@@ -35,10 +41,12 @@ nav {
 }
 
 .single-review {
-  border: 4px solid $blue;
+  border: 4px solid $darkGreen;
   border-radius: 20px;
   width: 47%;
   margin-top: 40px;
+  background-color: $darkGreen;
+  color: $black;
 }
 
 // section {
@@ -85,7 +93,7 @@ nav {
 
 .intro-top-half {
   // border: 2px solid $white;
-  height: 20%;
+  height: 15%;
 }
 
 .intro-bottom-half {
@@ -95,7 +103,28 @@ nav {
 
 .intro-left-third {
   width: 50%;
+  // border: 3px solid $babyBlue;
+  display: flex;
+  border-right: 1px solid $darkGreen;
 }
+
+.article-spacer{
+  width: 5%;
+  // border: 2px solid $white;
+}
+
+.intro-article {
+  // border: 2px solid $red;
+  width: 95%;
+  // display: flex;
+  // flex-direction: column;
+  // justify-content: center;
+  // align-items: center;
+}
+
+// .article-child {
+//   border: 1px solid $white;
+// }
 
 .intro-right-third {
   width: 50%;
@@ -114,12 +143,99 @@ p {
   font-family: 'Nunito Sans', sans-serif;
 }
 
-#project-name {
+.josefin {
   font-family: 'Josefin Sans', serif;
 }
 
 button {
-  color: $babyBlue;
+  color: $lightGreen;
   border-radius: 15px;
   background-color: $black;
 }
+
+input {
+  background-color: $black;
+  color: $lightGreen;
+}
+
+.dark-blue-font {
+  color: $darkGreen;
+}
+
+.babyBluetext {
+  color: $lightGreen;
+}
+
+.red-background {
+  background-color: $red;
+}
+
+.pink-text {
+  color: $coral;
+}
+
+.white-text {
+  color: $white;
+}
+
+
+///////////////////////////////
+///////////////////////////////
+///////////////////////////////
+///////////////////////////////
+///////////////////////////////
+///////////////////////////////
+
+.intro-right-third {
+  // border: 3px solid $babyBlue;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.right-div-child {
+  // border: 2px solid $red;
+  width: 40%;
+  height: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+// .bio-entry {
+//   color: $red;
+//   height: 30px;
+// }
+
+.black-text {
+  color: $black;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+////////

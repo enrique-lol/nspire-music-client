@@ -37,31 +37,102 @@
 
         <div class='intro-top-half'>
           <div class='messages-div intro-top-third'>
-          <h1 id='accent-color' class='app-title'>Welcome Page</h1>
-          <p class='nunito'>Log in or Sign up</p>
+          <h1 id='accent-color' class='app-title'>Welcome to nSpire Music</h1>
           <h2 id='first-page-message'></h2>
         </div>
       </div>
 
       <div class='intro-bottom-half'>
           <div class='description-and-signup-div intro-left-third'>
-          <form id='sign-up-form' class='form sign-up-formy'>
-            <input type='text' name='credentials[email]' placeholder="email">
-            <input type='password' name='credentials[password]' placeholder="password">
-            <input type='password' name='credentials[password_confirmation]' placeholder="password, but again">
-            <input type='text' name='accountdata[bio]' placeholder="required: write a short bio for yourself...">
-            <button type='submit'>Create Account</button>
-          </form>
+
+            <article class='article-spacer'>
+            </article>
           <article class='intro-article'>
+
+            <div class='article-child'>
+            <h2 class='article-child intro-art-title app-title'>'nouncies!</h2>
+          </div>
+
+            <div class='article-child'>
+            <h5 class='intro-art-text1 app-title'>Create an Account to: </h5>
+            <ul style='list-style-type:disc'>
+              <li>Customize your profile picture</li>
+              <li>Describe your musical taste in your bio</li>
+	             <li>Post a review to your profile</li>
+               <li>See all reviews made on nSpire Music</li>
+               <li>Delete your own posts</li>
+            </ul>
+          </div>
+
+            <div class='article-child'>
+            <h5 class='intro-art-text2 app-title'>Coming Soon...</h5>
+            <ul style='list-style-type:circle'>
+              <li>Edit your old posts</li>
+              <li>Ability to like and comment on a post</li>
+	             <li>Connect with friends and musicians by 'following' them</li>
+               <li>Rank your favorite reviewed music to generate an 'nSpire Board'</li>
+               <li>Connect your Spotify account to stream music on nSpire with Spotify Web Widgets!</li>
+
+               <!-- <img src="https://i.imgur.com/uyFosTE.png" style='width:180px;height:250px;' >
+               <img src="https://i.imgur.com/liODKuX.png" style='width:130px;height:30px;' > -->
+
+            </ul>
+          </div>
+
+
+          </article>
+
+          <article class='article-spacer'>
           </article>
         </div>
 
         <div class='log-in-div intro-right-third'>
+
+          <div class='right-div-child'>
+            <h2 class='app-title'>User Log-in</h2>
+            <div class='login-form-child'>
           <form id='log-in-form' class='form'>
+            <div class='login-form-child'>
             <input type='text' name='credentials[email]' placeholder="email">
+          </div>
+          <div class='login-form-child'>
             <input type='password' name='credentials[password]' placeholder="password">
+          </div>
+          <div class='login-form-child'>
             <button type='submit'>Log in</button>
+          </div>
           </form>
+        </div>
+        </div>
+
+          <div class='right-div-child app-title'>
+          <form id='sign-up-form' class='form sign-up-formy'>
+            <div class='signup-form-child'>
+            <input type='text' name='credentials[email]' placeholder="email">
+          </div>
+          <div class='signup-form-child'>
+            <input type='password' name='credentials[password]' placeholder="password">
+          </div>
+          <div class='signup-form-child'>
+            <input type='password' name='credentials[password_confirmation]' placeholder="password, but again">
+          </div>
+          <div class='signup-form-child'>
+            <input type='text' name='accountdata[bio]'  placeholder="profile picture url">
+          </div>
+          <div class='signup-form-child bio-entry'>
+            <input type='text' name='accountdata[avi]' class='bio-entry' placeholder="required: write a short bio for yourself...">
+          </div>
+
+          <div class='signup-form-child'>
+            <button type='submit'>Create Account</button>
+          </div>
+          </form>
+
+          <div class='signup-form-child'>
+          <button type='click' class='s-u-f-button'>Sign Up!</button>
+        </div>
+        </div>
+
         </div>
       </div>
         </section>
@@ -70,7 +141,7 @@
       <!-- page 2 : user profile with list of all app reviews -->
       <section class='page p2 home-page' id='page-2-parent-container'>
         <section class='page p2 home-page' id='page-2'>
-          <h1 id='home-page-profile'></h1>
+          <h1 class='dark-blue-font' id='home-page-profile'></h1>
           <h4 id='home-page-bio'></h4>
           <h3 id='home-page-message'></h3>
           user profile with all app  reviews.
@@ -87,11 +158,11 @@
       <section class='page p3 settings-page' id='page-3-parent-container'>
         <section class='page p3 settings-page' id='page-3'>
           <div class='title-and-messages-div settings-title'>
-          <h1>Settings Page</h1>
+          <h1 class='dark-blue-font'>Settings Page</h1>
         </div>
         <h2 id='settings-page-message'></h2>
           settings where users can change password, update bio, and sign-OUT
-          <div class='change-bio-div'>
+          <div class='change-bio-div dark-blue-font'>
             <h2>Update Profile Bio</h2>
         <form class='change-bio-form'>
           <input type='text' name='bio[new]' placeholder="update bio">
@@ -99,17 +170,17 @@
           <button type='submit'>Update</button>
         </form>
         </div>
-          <div class='change-pw-div'>
+          <div class='change-pw-div dark-blue-font'>
             <h2>Change Password</h2>
-        <form class='change-pw-form'>
+        <form class='dark-blue-font change-pw-form'>
           <input type='password' name='passwords[old]' placeholder="old password">
           <input type='password' name='passwords[new]' placeholder="new password">
-          <button type='submit'>Confirm change</button>
+          <button class=''type='submit'>Confirm change</button>
         </form>
         </div>
         <div class='sign-out-div'>
-          <h2>Sign Out</h2>
-          <button class='user-leave'>Sayonara</button>
+          <h2 class='dark-blue-font'>Sign-Out</h2>
+          <button class='user-leave red-background white-text'>thank u 4 visiting</button>
         </div>
         </section>
       </section>
