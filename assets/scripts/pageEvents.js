@@ -13,6 +13,8 @@ const appReset = function() {
   $('.intro-article').show()
   $('form').trigger("reset")
   $('#all-reviews-container').text('')
+  $('.home-page-avi').text('')
+  $('.nav-avi').text('')
 }
 
 const queueSignUp = function() {
@@ -25,13 +27,12 @@ const toHome = function() {
   $('#home-page-avi').text('')
   $('#navigation-bar').show()
   $('.home-page').show()
-  $('#home-page-profile').text(store.user.email)
+  $('.home-page-profile').text(store.user.email)
   $('#home-page-bio').text(store.user.bio)
-  $('#home-page-avi').append("<img class='pfp' src=" + ' "' + store.user.avi + '" ' +
-  "style='width:125px;height:125px;'"+ ">")
   $('#home-button').hide()
   $('#new-post-button').show()
   $('#settings-button').show()
+  $('.nav-child-1').hide()
   // console.log('Bio text: ', store.user.bio)
   // console.log('===========================')
   // console.log('pfp URL: ', store.user.avi)
@@ -50,7 +51,8 @@ const toSettings = function() {
   $('#settings-button').hide()
   $('#home-button').show()
   $('#new-post-button').show()
-}
+  $('.nav-child-1').show()
+  }
 // whenever signed-in, nav shows with 'new post' button
 const toNewPost = function() {
   $('.page').hide()
@@ -60,7 +62,8 @@ const toNewPost = function() {
   $('#new-post-button').hide()
   $('#home-button').show()
   $('#settings-button').show()
-}
+  $('.nav-child-1').show()
+  }
 
 
 module.exports = {

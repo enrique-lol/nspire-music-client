@@ -173,6 +173,7 @@ button {
 input {
   background-color: $black;
   color: $lightGreen;
+  border-radius: 15px;
 }
 
 .dark-blue-font {
@@ -246,18 +247,98 @@ input {
 .pfp {
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   clip-path: circle();
+  margin-left: 7%;
 }
 
+.profile-div {
+  border: 4px solid $darkGreen;
+  // border-radius: 15px;
+  border-radius: 0px 0px 15px 15px;
+  display: flex;
+  flex-direction: row;
+}
+
+.profile-child {
+  // border: 2px solid $white;
+  display: flex;
+  flex-direction: column;
+  margin-left: 2%;
+}
+
+.home-child-2 {
+  display: flex;
+}
+
+#home-page-bio {
+  // padding-bottom: 2px;
+  border-top: 2px solid $black;
+}
+
+button:focus {outline:0;}
+
+input:focus {outline:0;}
 
 
+#navigation-bar {
+  // border: 3px solid $red;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  background-color: $darkGreen;
+  color: $lightGreen;
+}
 
+#navigation-bar > button {
+  height: 25%;
+}
+ .light-green-text {
+   color: $lightGreen;
+ }
 
+ .dark-green-text {
+   color: $darkGreen;
+ }
 
+ .nav-child-3 {
+   margin-top: 1.25%;
+   display: flex;
+   justify-content: flex-end;
+   margin-left: 13.75%;
+   padding-right: 1%;
+   // margin-right: 2%;
+   width: 25%;
+ }
 
+ .nav-child-3 > button {
+   height: 75%;
+ }
 
+ .nav-child-1 {
+   // border: 2px solid $red;
+   width: 41%;
+   display: flex;
+ }
 
+.nav-avi {
+  margin-top: 2%;
+}
 
+.nav-name {
+  margin-top: 3.25%;
+  margin-left: 3%;
+}
 
+.black-text {
+  color: $black;
+}
+
+.home-page-avi {
+  margin-top: 0.3%;
+}
+
+.login-form-parent {
+  border-bottom: 1px solid $darkGreen;
+}
 
 
 

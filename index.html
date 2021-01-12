@@ -26,10 +26,22 @@
     </head>
     <body>
       <nav id='navigation-bar'>
-        <h1 id='accent-color' class='app-title'>nSpire Music</h1>
+        <div class='nav-child-1'>
+
+          <div class='nav-avi' >
+          </div>
+
+        <h4 class='home-page-profile nav-name black-text josefin'> </h4>
+
+      </div>
+        <div class='nav-child-2'>
+        <h1 class='app-title black-text'>nSpire Music</h1>
+      </div>
+      <div class='nav-child-3'>
         <button id='settings-button'>Settings</button>
         <button id='new-post-button'>New Post!</button>
         <button id='home-button'>Home</button>
+      </div>
       </nav>
       <!-- page 1 : login or sign up now intro page -->
       <section class='page p1 intro-page' id='page-1-parent-container'>
@@ -37,7 +49,7 @@
 
         <div class='intro-top-half'>
           <div class='messages-div intro-top-third'>
-          <h1 id='accent-color' class='app-title'>Welcome to nSpire Music</h1>
+          <h1 class='app-title dark-green-text'>Welcome to nSpire Music</h1>
           <h6 id='first-page-message'></h6>
         </div>
       </div>
@@ -71,7 +83,6 @@
               <li>Ability to like and comment on a post</li>
 	             <li>Connect with friends and musicians by 'following' them</li>
                <li>Rank your favorite reviewed music to generate an "nSpire Board"</li>
-               <li>Full mobile accessibility</li>
                <li>Connect your Spotify account to stream music on nSpire with Spotify Web Widgets!</li>
 
                <!-- <img src="https://i.imgur.com/uyFosTE.png" style='width:180px;height:250px;' >
@@ -89,7 +100,7 @@
 
         <div class='log-in-div intro-right-third'>
 
-          <div class='right-div-child'>
+          <div class='right-div-child login-form-parent'>
             <h2 class='app-title'>User Log-in</h2>
             <div class='login-form-child'>
           <form id='log-in-form' class='form'>
@@ -118,10 +129,10 @@
             <input type='password' name='credentials[password_confirmation]' placeholder="password, but again">
           </div>
           <div class='signup-form-child bio-entry'>
-            <input type='text' name='accountdata[bio]' class='bio-entry' placeholder="required: write a short bio for yourself...">
+            <input type='text' name='accountdata[bio]' class='bio-entry' placeholder="short bio of yourself...">
           </div>
           <div class='signup-form-child'>
-            <input type='text' name='accountdata[avi]'  placeholder="pfp URL from Imgur">
+            <input type='text' name='accountdata[avi]'  placeholder="profile picture URL">
           </div>
 
 
@@ -144,11 +155,18 @@
       <!-- page 2 : user profile with list of all app reviews -->
       <section class='page p2 home-page' id='page-2-parent-container'>
         <section class='page p2 home-page' id='page-2'>
-          <div id='home-page-avi'>
-
+          <div class='profile-div'>
+            <!-- <div class='profile-child home-child-1'> -->
+          <div class='home-page-avi' >
           </div>
-          <h1 class='dark-blue-font' id='home-page-profile'></h1>
-          <h4 id='home-page-bio'></h4>
+        <!-- </div> -->
+
+        <div class='profile-child home-child-2'>
+          <h1 class='home-page-profile'> </h1>
+          <h4 id='home-page-bio'>
+          </h4>
+        </div>
+        </div>
 
           <h3 id='home-page-message'></h3>
           <!-- user profile with all app  reviews. -->

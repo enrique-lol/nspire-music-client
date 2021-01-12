@@ -24,6 +24,11 @@ const signInDub = function (response) {
   pageEvents.toHome()
   $('form').trigger("reset")
   $('#home-page-message').text('')
+  // import user profile PICTURE
+  $('.home-page-avi').append("<img class='pfp' src=" + ' "' + store.user.avi + '" ' +
+  "style='width:100px;height:100px;'"+ ">")
+  $('.nav-avi').append("<img class='pfp' src=" + ' "' + store.user.avi + '" ' +
+  "style='width:35px;height:35px;'"+ ">")
   // userevents.fetchAllReviews()
   // console.log(store.user)
 
