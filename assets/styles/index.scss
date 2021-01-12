@@ -1,0 +1,414 @@
+@import '~bootstrap/scss/bootstrap';
+
+
+$slate: #222;
+$black: #000;
+$white: #fff;
+$red: #B53636;
+$grey: #808080;
+///////////////
+$blue: #1B5AA0;
+$darkGreen: #599809;
+/////////////
+$darkTeal: #385E67;
+$coral: #FFA2F1;
+$chocolateBrown: #644207;
+///////////////////////
+$babyBlue: #7692B1;
+$lightGreen: #B7CD99;
+/////////////////////
+$darkblue: #6EB1D5;
+$reviewsContainer: #7A90A8;
+$oat: #CFC9AE;
+$dullGreen: #7CA75C;
+
+#accent-color {
+  color: $darkGreen;
+}
+
+#project-name {
+  color: $darkGreen;
+}
+
+.page {
+  background-color: $oat;
+  color: $black;
+  font-family: 'Josefin Sans', sans-serif;
+}
+
+body {
+  background-color: $oat;
+  font-family: 'Josefin Sans', sans-serif;
+}
+
+nav {
+  color: $white;
+  font-family: 'Josefin Sans', sans-serif;
+}
+
+.single-review {
+  // border: 4px solid $red;
+  border-radius: 20px;
+  width: 48%;
+  margin-top: 35px;
+  margin-bottom: 15px;
+  background-color: $darkGreen;
+  color: $black;
+  border: 1px solid $black;
+  padding: 10px;
+  box-shadow: 5px 10px;
+  display: flex;
+  justify-content: space-around;
+  height: auto;
+  // box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.s-review-child {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  // width: 50%;
+  // justify-content: space-between;
+}
+
+.proj-data {
+  width: 25%;
+  background-color: rgba(12, 38, 12, .13);
+  border-radius: 10px;
+}
+
+.s-review-img {
+  padding-top: 10px;
+  padding-bottom: 5px;
+}
+
+.owner-data {
+  width: 70%;
+}
+
+
+
+// section {
+//   border: 2px solid $coral;
+// }
+
+#reviews-parent {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+
+#all-reviews-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  // border: 2px solid $white;
+  width: 95%;
+  // background-color: $reviewsContainer;
+  border-radius: 25px;
+}
+
+
+
+//////////////////////
+
+.intro-page {
+  // border: 2px solid $red;
+  height: 709px;
+}
+
+.intro-top-third {
+  // border: 2px solid $white;
+  }
+//
+// .intro-left-third {
+//   border: 2px solid $slate;
+// }
+//
+// .intr-right-third {
+//   border: 2px solid $red;
+// }
+
+.intro-top-half {
+  // border: 2px solid $white;
+  height: 15%;
+}
+
+.intro-bottom-half {
+  // border: 2px solid $red;
+  display: flex;
+}
+
+.intro-left-third {
+  width: 50%;
+  // border: 3px solid $babyBlue;
+  display: flex;
+  align-items: center;
+  border-right: 1px solid $darkGreen;
+}
+
+.article-spacer{
+  width: 5%;
+  // border: 2px solid $white;
+}
+
+.intro-article {
+  // border: 2px solid $red;
+  width: 95%;
+  // display: flex;
+  // flex-direction: column;
+  // justify-content: center;
+  // align-items: center;
+}
+
+// .article-child {
+//   border: 1px solid $white;
+// }
+
+.intro-right-third {
+  width: 50%;
+}
+
+.app-title {
+  font-family: 'Josefin Sans', serif;
+  text-align: center;
+  margin-top: 2%;
+}
+
+#first-page-message {
+  text-align: center;
+}
+
+.intro-art-title {
+  text-align: center;
+}
+
+
+.nunito {
+  font-family: 'Josefin Sans', sans-serif;
+}
+
+p {
+  font-size: 20px;
+  font-family: 'Josefin Sans', sans-serif;
+}
+
+.josefin {
+  font-family: 'Josefin Sans', sans-serif;
+}
+
+button {
+  color: $black;
+  border-radius: 15px;
+  background-color: $darkGreen;
+}
+
+input {
+  background-color: $black;
+  color: $lightGreen;
+  border-radius: 15px;
+}
+
+.dark-blue-font {
+  color: $darkGreen;
+}
+
+.babyBluetext {
+  color: $lightGreen;
+}
+
+.red-background {
+  background-color: $red;
+}
+
+.pink-text {
+  color: $coral;
+}
+
+.white-text {
+  color: $white;
+}
+
+
+///////////////////////////////
+///////////////////////////////
+///////////////////////////////
+///////////////////////////////
+///////////////////////////////
+///////////////////////////////
+
+.intro-right-third {
+  // border: 3px solid $babyBlue;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.right-div-child {
+  // border: 2px solid $red;
+  width: 40%;
+  height: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+// .bio-entry {
+//   color: $red;
+//   height: 30px;
+// }
+
+.black-text {
+  color: $black;
+}
+
+
+.login-form-child {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+
+//////////////////////////
+/// USER PROFILE PICTURE///
+///////////////////////////
+
+.pfp {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  clip-path: circle();
+  margin-left: 7%;
+}
+
+.profile-div {
+  border: 4px solid $darkGreen;
+  // border-radius: 15px;
+  border-radius: 0px 0px 15px 15px;
+  display: flex;
+  flex-direction: row;
+}
+
+.profile-child {
+  // border: 2px solid $white;
+  display: flex;
+  flex-direction: column;
+  margin-left: 2%;
+}
+
+.home-child-2 {
+  display: flex;
+}
+
+#home-page-bio {
+  // padding-bottom: 2px;
+  border-top: 2px solid $black;
+}
+
+button:focus {outline:0;}
+
+input:focus {outline:0;}
+
+
+#navigation-bar {
+  // border: 3px solid $red;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  background-color: $darkGreen;
+  color: $lightGreen;
+  // box-shadow: 5px 10px;
+  // box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+#navigation-bar > button {
+  height: 25%;
+  background-color: $black;
+  color: $oat;
+}
+ .light-green-text {
+   color: $lightGreen;
+ }
+
+ .dark-green-text {
+   color: $darkGreen;
+ }
+
+ .nav-child-3 {
+   margin-top: 1.25%;
+   display: flex;
+   justify-content: flex-end;
+   margin-left: 13.75%;
+   padding-right: 1%;
+   // margin-right: 2%;
+   width: 25%;
+ }
+
+.nav-child-3 > button {
+  background-color: $black;
+  color: $oat;
+}
+
+
+ .nav-child-3 > button {
+   height: 75%;
+ }
+
+ .nav-child-1 {
+   // border: 2px solid $red;
+   width: 41%;
+   display: flex;
+ }
+
+.nav-avi {
+  margin-top: 2%;
+}
+
+.nav-name {
+  margin-top: 3.25%;
+  margin-left: 3%;
+}
+
+.black-text {
+  color: $black;
+}
+
+.home-page-avi {
+  margin-top: 0.3%;
+}
+
+.login-form-parent {
+  border-bottom: 1px solid $darkGreen;
+}
+
+.user-owned-review {
+  background-color: $lightGreen;
+}
+
+.user-owned-review > .s-review-child {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+
+
+.grey-text {
+  color: $grey;
+}
+
+.review-id {
+  font-size: 15px;
+}
+
+
+
+
+
+
+
+////////

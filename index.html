@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html>
+    <head>
+      <title>nSpire Music</title>
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+
+      <!-- Do not add `link` tags-->
+      <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+
+      <!-- Do not add `script` tags-->
+      <script src="public/vendor.js" type="text/javascript" charset="utf-8" defer></script>
+      <script src="public/application.js" type="text/javascript" charset="utf-8" defer></script>
+
+      <style>
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,500;1,500&display=swap');
+</style>
+
+
+
+    </head>
+    <body>
+      <nav id='navigation-bar'>
+        <div class='nav-child-1'>
+
+          <div class='nav-avi' >
+          </div>
+
+        <h4 class='home-page-profile nav-name black-text josefin'> </h4>
+
+      </div>
+        <div class='nav-child-2'>
+        <h1 class='app-title black-text'>nSpire Music</h1>
+      </div>
+      <div class='nav-child-3'>
+        <button id='settings-button'>Settings</button>
+        <button id='new-post-button'>New Post!</button>
+        <button id='home-button'>Home</button>
+      </div>
+      </nav>
+      <!-- page 1 : login or sign up now intro page -->
+      <section class='page p1 intro-page' id='page-1-parent-container'>
+        <section class='page p1 intro-page' id='page-1'>
+
+        <div class='intro-top-half'>
+          <div class='messages-div intro-top-third'>
+          <h1 class='app-title dark-green-text'>Welcome to nSpire Music</h1>
+          <h6 id='first-page-message'></h6>
+        </div>
+      </div>
+
+      <div class='intro-bottom-half'>
+          <div class='description-and-signup-div intro-left-third'>
+
+            <article class='article-spacer'>
+            </article>
+          <article class='intro-article'>
+
+            <div class='article-child'>
+            <h1 class='article-child intro-art-title app-title'> 'nouncies!</h1>
+          </div>
+
+            <div class='article-child'>
+            <h5 class='intro-art-text1 app-title'>Create an Account to: </h5>
+            <ul style='list-style-type:disc'>
+              <li>Customize your profile picture</li>
+              <li>Describe your musical taste in your bio</li>
+	             <li>Post a review to your profile</li>
+               <li>See all reviews made on nSpire Music</li>
+               <li>Delete your own posts</li>
+            </ul>
+          </div>
+
+            <div class='article-child'>
+            <h5 class='intro-art-text2 app-title'>Coming Soon...</h5>
+            <ul style='list-style-type:circle'>
+              <li>Edit your old posts</li>
+              <li>Ability to like and comment on a post</li>
+	             <li>Connect with friends and musicians by 'following' them</li>
+               <li>Rank your favorite reviewed music to generate an "nSpire Board"</li>
+               <li>Connect your Spotify account to stream music on nSpire with Spotify Web Widgets!</li>
+
+               <!-- <img src="https://i.imgur.com/uyFosTE.png" style='width:180px;height:250px;' >
+               <img src="https://i.imgur.com/liODKuX.png" style='width:130px;height:30px;' > -->
+
+            </ul>
+          </div>
+
+
+          </article>
+
+          <article class='article-spacer'>
+          </article>
+        </div>
+
+        <div class='log-in-div intro-right-third'>
+
+          <div class='right-div-child login-form-parent'>
+            <h2 class='app-title'>User Log-in</h2>
+            <div class='login-form-child'>
+          <form id='log-in-form' class='form'>
+            <div class='login-form-child'>
+            <input type='text' name='credentials[email]' placeholder="email">
+          </div>
+          <div class='login-form-child'>
+            <input type='password' name='credentials[password]' placeholder="password">
+          </div>
+          <div class='login-form-child'>
+            <button type='submit'>Log in</button>
+          </div>
+          </form>
+        </div>
+        </div>
+
+          <div class='right-div-child app-title'>
+          <form id='sign-up-form' class='form sign-up-formy'>
+            <div class='signup-form-child'>
+            <input type='text' name='credentials[email]' placeholder="email">
+          </div>
+          <div class='signup-form-child'>
+            <input type='password' name='credentials[password]' placeholder="UNIQUE password">
+          </div>
+          <div class='signup-form-child'>
+            <input type='password' name='credentials[password_confirmation]' placeholder="password, but again">
+          </div>
+          <div class='signup-form-child bio-entry'>
+            <input type='text' name='accountdata[bio]' class='bio-entry' placeholder="short bio of yourself...">
+          </div>
+          <div class='signup-form-child'>
+            <input type='text' name='accountdata[avi]'  placeholder="profile picture URL">
+          </div>
+
+
+          <div class='signup-form-child'>
+            <button type='submit'>Create Account</button>
+          </div>
+          </form>
+
+          <div class='signup-form-child'>
+            <h2 class='app-title s-u-f-button'>New?</h2>
+          <button type='click' class='s-u-f-button'>Sign Up!</button>
+        </div>
+        </div>
+
+        </div>
+      </div>
+        </section>
+      </section>
+
+      <!-- page 2 : user profile with list of all app reviews -->
+      <section class='page p2 home-page' id='page-2-parent-container'>
+        <section class='page p2 home-page' id='page-2'>
+          <div class='profile-div'>
+            <!-- <div class='profile-child home-child-1'> -->
+          <div class='home-page-avi' >
+          </div>
+        <!-- </div> -->
+
+        <div class='profile-child home-child-2'>
+          <h2 class='home-page-profile'> </h2>
+          <h5 id='home-page-bio'>
+          </h5>
+        </div>
+        </div>
+
+          <h3 id='home-page-message'></h3>
+          <!-- user profile with all app  reviews. -->
+          <button id='temporary-get-button'>Be nSpired!</button>
+          <section id='reviews-parent'>
+          <section id='all-reviews-container'>
+
+          </section>
+        </section>
+        </section>
+      </section>
+
+      <!-- page 3 : settings page  -->
+      <section class='page p3 settings-page' id='page-3-parent-container'>
+        <section class='page p3 settings-page' id='page-3'>
+          <div class='title-and-messages-div settings-title'>
+          <h1 class='dark-blue-font'>Settings Page</h1>
+        </div>
+        <h2 id='settings-page-message'></h2>
+
+          <div class='change-bio-div dark-blue-font'>
+            <h2>Update Profile Bio</h2>
+        <form class='change-bio-form'>
+          <input type='text' name='bio[new]' placeholder="update bio">
+          <input type='password' name='passwords[old]' placeholder="password">
+          <button type='submit'>Update</button>
+        </form>
+        </div>
+        <!-- lol -->
+        <div class='change-avi-div dark-blue-font'>
+          <h2>Update Profile Picture</h2>
+      <form class='change-avi-form'>
+        <input type='text' name='avi[new]' placeholder="URL from Imgur">
+        <input type='password' name='passwords[old]' placeholder="password">
+        <button type='submit'>Update</button>
+      </form>
+      </div>
+      <!-- lol -->
+          <div class='change-pw-div dark-blue-font'>
+            <h2>Change Password</h2>
+        <form class='dark-blue-font change-pw-form'>
+          <input type='password' name='passwords[old]' placeholder="old password">
+          <input type='password' name='passwords[new]' placeholder="new password">
+          <button class=''type='submit'>Confirm change</button>
+        </form>
+        </div>
+
+        <div class='delete-review-parent-div'>
+        <h2 class='dark-green-text'>Delete a Review</h2>
+        <form class='delete-review-form'>
+        <input type='text' name='id' placeholder='Review ID'>
+        <button type='submit'>DELETE Review</button>
+      </form>
+    </div>
+        <div class='sign-out-div'>
+          <h2 class='dark-blue-font'>Sign-Out</h2>
+          <button class='user-leave red-background white-text'>thank u 4 visiting</button>
+        </div>
+        </section>
+      </section>
+
+      <!-- page 4 : write a full review -->
+      <section class='page p4 new-post-page' id='page-4-parent-container'>
+        <section class='page p4 new-post-page' id='page-4'>
+          <h1>New Post</h1>
+          <form class='new-post-form'>
+          <input type='text' name='review[project]' placeholder='Song, Album, or compilation'>
+          <input type='text' name='review[artist]' placeholder='Artist'>
+          <input type='text' name='review[title]' placeholder='Headline: title of your review'>
+          <input type='text' name='review[text]' placeholder='Love it or hate it? why?...'>
+          <input type='text' name='review[image]' placeholder='image url (from Imgur)'>
+          <button type='submit'>Create Post</button>
+        </form>
+                </section>
+      </section>
+
+    </body>
+</html>
