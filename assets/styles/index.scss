@@ -8,14 +8,14 @@ $red: #B53636;
 $grey: #808080;
 ///////////////
 $blue: #1B5AA0;
-$darkGreen: #477B05;
+$darkGreen: #599809;
 /////////////
 $darkTeal: #385E67;
 $coral: #FFA2F1;
 $chocolateBrown: #644207;
 ///////////////////////
 $babyBlue: #7692B1;
-$lightGreen: #A7C481;
+$lightGreen: #B7CD99;
 /////////////////////
 $darkblue: #6EB1D5;
 $reviewsContainer: #7A90A8;
@@ -33,14 +33,17 @@ $dullGreen: #7CA75C;
 .page {
   background-color: $oat;
   color: $black;
+  font-family: 'Josefin Sans', sans-serif;
 }
 
 body {
   background-color: $oat;
+  font-family: 'Josefin Sans', sans-serif;
 }
 
 nav {
   color: $white;
+  font-family: 'Josefin Sans', sans-serif;
 }
 
 .single-review {
@@ -184,16 +187,16 @@ nav {
 
 
 .nunito {
-  font-family: 'Nunito Sans', sans-serif;
+  font-family: 'Josefin Sans', sans-serif;
 }
 
 p {
   font-size: 20px;
-  font-family: 'Nunito Sans', sans-serif;
+  font-family: 'Josefin Sans', sans-serif;
 }
 
 .josefin {
-  font-family: 'Josefin Sans', serif;
+  font-family: 'Josefin Sans', sans-serif;
 }
 
 button {
