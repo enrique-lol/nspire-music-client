@@ -40,7 +40,7 @@ const signInEpicFail = function() {
 // below: Sign OUT success (dub) and fail (epic fail) responses
 const signOutDub = function () {
   pageEvents.appReset()
-  $('#first-page-message').text('See you soon ;)')
+  $('#first-page-message').text('Thanks for visiting!')
 }
 const signOutEpicFail = function() {
   console.log('u may not log out O.O  Try again.')
@@ -136,7 +136,7 @@ const getAllSuccess = function (response) {
         "<h3 id='review-title'>" + review.title + "</h3>" +
         // add whole review text
         "<p id='review-text'>" + review.text + "</p>" +
-        "<button id='delete-review' type='click'>Delete Review</button> " +
+        "<p class='review-id' >Review ID: " + review._id + "</p>" +
         // close RIGHT HALF div and main (with class of single-review)
         "</div>"  +
 
@@ -175,14 +175,35 @@ const getAllSuccess = function (response) {
     // "</div>"
   )
 }
-  // console.log(review.owner)
+  // console.log(review)
   });
+  // $('#dlt-review').on('submit', userevents.dltReview)
+  // $('.dlt-review').on('submit', userevents.dltReview)
   // console.log(store.user)
   // $('home-page-message').text('HELLO WORLD LOL')
 }
 const getAllFail = function() {
   console.log('cannot GET all reviews rn.')
 }
+//////////////////////////////////////////////
+const dltReviewSuccess = function() {
+  // console.log('success')
+  $('form').trigger("reset")
+  pageEvents.toHome()
+  $('#home-page-message').text('Ok fine, review deleted.')
+
+}
+const dltReviewFailure = function() {
+  $('#settings-page-message').text('ERROR: Sorry, it has to stay up for some reason')
+  pageEvents.toHome()
+  $('#home-page-message').text('Ok fine, review deleted.')
+  // console.log('success without the "ess" at the end ')
+}
+
+
+
+
+
 ////////////////////////////////////////////
 // const  = function(response) {
 //   console.log('everything works!', response)
@@ -209,4 +230,6 @@ module.exports = {
   reviewFailure ,
   getAllSuccess ,
   getAllFail ,
+  dltReviewSuccess,
+  dltReviewFailure
   }

@@ -5,6 +5,7 @@ $slate: #222;
 $black: #000;
 $white: #fff;
 $red: #B53636;
+$grey: #808080;
 ///////////////
 $blue: #1B5AA0;
 $darkGreen: #477B05;
@@ -65,7 +66,7 @@ nav {
   flex-direction: column;
   align-items: center;
   // width: 50%;
-  // justify-content: center;
+  // justify-content: space-between;
 }
 
 .proj-data {
@@ -383,6 +384,22 @@ input:focus {outline:0;}
 
 .user-owned-review {
   background-color: $lightGreen;
+}
+
+.user-owned-review > .s-review-child {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+
+
+.grey-text {
+  color: $grey;
+}
+
+.review-id {
+  font-size: 15px;
 }
 
 

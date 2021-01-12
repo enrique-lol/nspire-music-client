@@ -86,7 +86,16 @@ const getReviewsRequest = function() {
   })
 }
 /////////////////////////////////////////////
-
+const dltReviewRequest = function(data) {
+    return $.ajax({
+    url: config.apiUrl + '/reviews/' + data.id ,
+    method: 'DELETE',
+    headers: {
+      Authorization: 'Bearer ' + store.user.token
+    }
+  })
+}
+//////////////////////////////////////////
 
 
 module.exports = {
@@ -97,5 +106,6 @@ module.exports = {
   changeBioRequest ,
   changeAviRequest ,
   newReview ,
-  getReviewsRequest
+  getReviewsRequest ,
+  dltReviewRequest
 }

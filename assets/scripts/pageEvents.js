@@ -33,6 +33,7 @@ const toHome = function() {
   $('#new-post-button').show()
   $('#settings-button').show()
   $('.nav-child-1').hide()
+  $('#all-reviews-container').text('')
   // console.log('Bio text: ', store.user.bio)
   // console.log('===========================')
   // console.log('pfp URL: ', store.user.avi)

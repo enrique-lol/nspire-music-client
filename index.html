@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
     <head>
-      <title>Example</title>
+      <title>nSpire Music</title>
       <meta name="viewport" content="width=device-width, initial-scale=1">
 
       <!-- Do not add `link` tags-->
@@ -170,7 +170,7 @@
 
           <h3 id='home-page-message'></h3>
           <!-- user profile with all app  reviews. -->
-          <button id='temporary-get-button'>Get it</button>
+          <button id='temporary-get-button'>Be nSpired!</button>
           <section id='reviews-parent'>
           <section id='all-reviews-container'>
 
@@ -186,7 +186,7 @@
           <h1 class='dark-blue-font'>Settings Page</h1>
         </div>
         <h2 id='settings-page-message'></h2>
-          settings where users can change password, update bio, and sign-OUT
+
           <div class='change-bio-div dark-blue-font'>
             <h2>Update Profile Bio</h2>
         <form class='change-bio-form'>
@@ -213,6 +213,14 @@
           <button class=''type='submit'>Confirm change</button>
         </form>
         </div>
+
+        <div class='delete-review-parent-div'>
+        <h2 class='dark-green-text'>Delete a Review</h2>
+        <form class='delete-review-form'>
+        <input type='text' name='id' placeholder='Review ID'>
+        <button type='submit'>DELETE Review</button>
+      </form>
+    </div>
         <div class='sign-out-div'>
           <h2 class='dark-blue-font'>Sign-Out</h2>
           <button class='user-leave red-background white-text'>thank u 4 visiting</button>
@@ -224,7 +232,6 @@
       <section class='page p4 new-post-page' id='page-4-parent-container'>
         <section class='page p4 new-post-page' id='page-4'>
           <h1>New Post</h1>
-          page to write a new review
           <form class='new-post-form'>
           <input type='text' name='review[project]' placeholder='Song, Album, or compilation'>
           <input type='text' name='review[artist]' placeholder='Artist'>
@@ -233,7 +240,7 @@
           <input type='text' name='review[image]' placeholder='image url (from Imgur)'>
           <button type='submit'>Create Post</button>
         </form>
-        </section>
+                </section>
       </section>
 
     </body>

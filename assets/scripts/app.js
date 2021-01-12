@@ -34,6 +34,9 @@ $(() => {
   $('#temporary-get-button').on('click', userEvents.fetchAllReviews)
 
 
+  // $('.dlt-review').on('submit', userEvents.dltReview)
+  $('.delete-review-form').on('submit', userEvents.dltReview)
+
 
 })
 

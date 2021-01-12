@@ -94,7 +94,17 @@ const toHome = function() {
     .then(ui.getAllSuccess)
     .catch(ui.getAllFail)
 }
+////////////////////////////////////////////
+const dltReview = function(event) {
+  event.preventDefault()
+  // console.log('event target: ', event.target)
+  const data = getFormFields(event.target)
+  // console.log(data)
 
+  api.dltReviewRequest(data)
+    .then(ui.dltReviewSuccess)
+    .catch(ui.dltReviewFailure)
+}
 
 
 
@@ -108,5 +118,6 @@ module.exports = {
   newReview ,
   fetchAllReviews ,
   newReview ,
-  toHome
+  toHome ,
+  dltReview
 }
