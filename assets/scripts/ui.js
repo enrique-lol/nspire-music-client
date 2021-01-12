@@ -95,10 +95,11 @@ const reviewSuccess = function(response) {
   $('form').trigger("reset")
   $('#new-post-page-message').text('')
   $('#home-page-message').text('Your review successfully uploaded!')
+  $('#all-reviews-container').text('')
 }
 const reviewFailure = function() {
   // console.log('post fumbled')
-  $('#new-post-page-message').text('oopsie review-machine broke.')
+  $('#new-post-page-message').text('oopsie! review-machine broke.')
 }
 /////////////////////////////////////////////////////
 /////////////////////////////////////////////////////
@@ -111,27 +112,72 @@ const getAllSuccess = function (response) {
   console.log('this thing is buggin out')
   const allReviews = response.reviews
 
-  allReviews.forEach((item, i) => {
+  allReviews.forEach((review, i) => {
+
+    // If (review.owner (owner id) === store.user._id),
+    // then the signed-in user is the owner of that review.
+    // If true (review.owner === user), color different, add delete button
+    if (review.owner === store.user._id) {
+      $('#all-reviews-container').append(
+        "<div class='single-review user-owned-review'> " +
+
+        // FIRST LEFT-HALF OF S-REVIEW
+        "<div class='proj-data s-review-child'>" +
+        // add image to html with styling
+        "<img class='s-review-img' src=" + ' " ' + review.image + ' " ' +
+        "style='width:125px;height:125px;'"+ ">" +
+        // add project name + "by" + artist
+        "<h3 class='black-text josefin s-review-project'>" + review.project + "</h3>" +
+        "<p class='black-text' s-review-artist>" + review.artist + "</p>" +
+        // CLOSE LEFT HALF OF S-Review AND OPEN RIGHT HALF
+        "</div>" + "<div class='owner-data s-review-child'>" +
+
+        // add review TITLE ONLY
+        "<h3 id='review-title'>" + review.title + "</h3>" +
+        // add whole review text
+        "<p id='review-text'>" + review.text + "</p>" +
+        "<button id='delete-review' type='click'>Delete Review</button> " +
+        // close RIGHT HALF div and main (with class of single-review)
+        "</div>"  +
+
+        "</div>")
+    }
+    // else print regularly
+     else if (review.owner != store.user._id) {
+
   $('#all-reviews-container').append(
     "<div class='single-review'> " +
+
+    // FIRST LEFT-HALF OF S-REVIEW
+    "<div class='proj-data s-review-child'>" +
     // add image to html with styling
-    "<img src=" + ' " ' + item.image + ' " ' +
+    "<img class='s-review-img' src=" + ' " ' + review.image + ' " ' +
     "style='width:125px;height:125px;'"+ ">" +
     // add project name + "by" + artist
-    "<h3 class='black-text josefin'>" + item.project + " by " +
-    item.artist + "</h4>" +
-    // add review TITLE ONLY
-    "<p id='review-title'>" + item.title + "</p>" +
-    // close div (with class of single-review)
-    "<div>"
+    "<h3 class='black-text josefin s-review-project'>" + review.project + "</h3>" +
+    "<p class='black-text' s-review-artist>" + review.artist + "</p>" +
+    // CLOSE LEFT HALF OF S-Review AND OPEN RIGHT HALF
+    "</div>" + "<div class='owner-data s-review-child'>" +
 
-    // "<h5 id='review-title'>" + item.title + "</h5>" +
-    // "<p id='review-text'>" + item.text + "</p>" +
-    // "<img src=" + ' " ' + item.image + ' " ' +
+    // add review TITLE ONLY
+    "<h3 id='review-title'>" + review.title + "</h3>" +
+    // add whole review text
+    "<p id='review-text'>" + review.text + "</p>" +
+    // close RIGHT HALF div and main (with class of single-review)
+    "</div>"  +
+
+    "</div>"
+
+    // "<h5 id='review-title'>" + review.title + "</h5>" +
+    // "<p id='review-text'>" + review.text + "</p>" +
+    // "<img src=" + ' " ' + review.image + ' " ' +
     // "style='width:125px;height:125px;'"+ ">" +
     // "</div>"
   )
+}
+  // console.log(review.owner)
   });
+  // console.log(store.user)
   // $('home-page-message').text('HELLO WORLD LOL')
 }
 const getAllFail = function() {
