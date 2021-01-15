@@ -2,17 +2,18 @@
 const config = require('./config.js')
 const store = require('./store.js')
 
-//////////////////////////////////////////////////////
-// sign up request should include long ajax fx
+/// ///////////////////////////////////////////////////
+
 const signUpRequest = function (formData) {
-  // console.log('api dub', signUpData)
   return $.ajax({
     url: config.apiUrl + '/sign-up',
     method: 'POST',
     data: formData
   })
 }
-///////////////////////////////////////////////////////
+
+/// ////////////////////////////////////////////////////
+
 const signInRequest = function (data) {
   return $.ajax({
     url: config.apiUrl + '/sign-in',
@@ -20,8 +21,10 @@ const signInRequest = function (data) {
     data
   })
 }
-///////////////////////////////////////////////////////
-const leaveRequest = function() {
+
+/// ////////////////////////////////////////////////////
+
+const leaveRequest = function () {
   return $.ajax({
     url: config.apiUrl + '/sign-out',
     method: 'DELETE',
@@ -30,8 +33,10 @@ const leaveRequest = function() {
     }
   })
 }
-///////////////////////////////////////////////////
-const changePwRequest = function(data) {
+
+/// ////////////////////////////////////////////////
+
+const changePwRequest = function (data) {
   return $.ajax({
     url: config.apiUrl + '/change-password',
     method: 'PATCH',
@@ -41,8 +46,10 @@ const changePwRequest = function(data) {
     }
   })
 }
-///////////////////////////////////////////////////
-const changeBioRequest = function(data) {
+
+/// ////////////////////////////////////////////////
+
+const changeBioRequest = function (data) {
   return $.ajax({
     url: config.apiUrl + '/change-bio',
     method: 'PATCH',
@@ -52,8 +59,10 @@ const changeBioRequest = function(data) {
     }
   })
 }
-///////////////////////////////////////////////
-const changeAviRequest = function(data) {
+
+/// ////////////////////////////////////////////
+
+const changeAviRequest = function (data) {
   return $.ajax({
     url: config.apiUrl + '/change-avi',
     method: 'PATCH',
@@ -63,7 +72,9 @@ const changeAviRequest = function(data) {
     }
   })
 }
-//////////////////////////////////////////////
+
+/// ///////////////////////////////////////////
+
 const newReview = function (data) {
   return $.ajax({
     url: config.apiUrl + '/reviews',
@@ -74,9 +85,10 @@ const newReview = function (data) {
     }
   })
 }
-////////////////////////////////////////////////
-const getReviewsRequest = function() {
-  console.log('the api GET function is firing!')
+
+/// /////////////////////////////////////////////
+
+const getReviewsRequest = function () {
   return $.ajax({
     url: config.apiUrl + '/reviews',
     method: 'GET',
@@ -85,9 +97,11 @@ const getReviewsRequest = function() {
     }
   })
 }
-/////////////////////////////////////////////
-const dltReviewRequest = function(data) {
-    return $.ajax({
+
+/// //////////////////////////////////////////
+
+const dltReviewRequest = function (data) {
+  return $.ajax({
     url: config.apiUrl + '/reviews/' + data.id,
     method: 'DELETE',
     headers: {
@@ -95,8 +109,8 @@ const dltReviewRequest = function(data) {
     }
   })
 }
-/// ///////////////////////////////////////
 
+/// ///////////////////////////////////////
 
 module.exports = {
   signUpRequest,

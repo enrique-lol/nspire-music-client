@@ -3,117 +3,111 @@ const store = require('./store.js')
 const api = require('./userApi.js')
 const ui = require('./ui.js')
 
-// on load, or when signig out, app will reset
-const appReset = function() {
+/// /////////////////////////////////////////////////////////////////////////////
+
+/// on load, or when signing out, app will reset
+const appReset = function () {
+  // Hide
   $('.page').hide()
   $('#navigation-bar').hide()
-  $('.intro-page').show()
   $('.sign-up-formy').hide()
+
+  // Show
+  $('.intro-page').show()
   $('.s-u-f-button').show()
   $('.intro-article').show()
-  $('form').trigger("reset")
+
+  // Reset or clear
+  $('form').trigger('reset')
   $('#all-reviews-container').text('')
   $('.home-page-avi').text('')
   $('.nav-avi').text('')
 }
 
-const queueSignUp = function() {
+/// ////////////////////////////////////////////////////////////////////////////
+
+/// When new, user clicks to queue sign-up form
+const queueSignUp = function () {
+  // Hide
   $('.s-u-f-button').hide()
+
+  // Show
   $('.sign-up-formy').show()
+
+  // Reset or clear
+  $('form').trigger('reset')
 }
-// after sign-IN, show second page, or (first auth page)
-const toHome = function() {
+
+/// ////////////////////////////////////////////////////////////////////////////
+
+/// After sign-IN, show Home.
+/// When signed-in and not on Home, click Home button, show Home.
+const toHome = function () {
+  // Hide
   $('.page').hide()
-  $('#home-page-avi').text('')
+  $('.nav-child-1').hide()
+  $('#home-button').hide()
+
+  // Show
   $('#navigation-bar').show()
   $('.home-page').show()
+  $('#new-post-button').show()
+  $('#settings-button').show()
+
+  // Reset or clear
+  $('#home-page-avi').text('')
+  $('#all-reviews-container').text('')
+  $('form').trigger('reset')
+
+  // Populate or fill
   $('.home-page-profile').text(store.user.email)
   $('#home-page-bio').text(store.user.bio)
-  $('#home-button').hide()
-  $('#new-post-button').show()
-  $('#settings-button').show()
-  $('.nav-child-1').hide()
-  $('#all-reviews-container').text('')
-  // console.log('Bio text: ', store.user.bio)
-  // console.log('===========================')
-  // console.log('pfp URL: ', store.user.avi)
-  $('form').trigger("reset")
-  api.getReviewsRequest()
-    .then(ui.getAllSuccess)
-    .catch(ui.getAllFail)
 }
-// whenever sign-in, nav shows with 'settings' button:
-// these are settings to change pw, change bio, log out
-const toSettings = function() {
+
+/// ///////////////////////////////////////////////////////////////////////////
+
+/// these are settings to change pw, change bio, log out
+const toSettings = function () {
+  // Hide
   $('.page').hide()
+  $('#settings-button').hide()
+
+  // Show
   $('#navigation-bar').show()
   $('.settings-page').show()
-  $('form').trigger("reset")
-  $('#settings-button').hide()
   $('#home-button').show()
   $('#new-post-button').show()
   $('.nav-child-1').show()
-  }
-// whenever signed-in, nav shows with 'new post' button
-const toNewPost = function() {
+
+  // Reset or clear
+  $('form').trigger('reset')
+}
+
+/// ////////////////////////////////////////////////////////////////////////////
+
+/// whenever signed-in, nav shows with 'new post' button. Go to New Post on click.
+const toNewPost = function () {
+  // Hide
   $('.page').hide()
+  $('#new-post-button').hide()
+
+  // Show
   $('#navigation-bar').show()
   $('.new-post-page').show()
-  $('form').trigger("reset")
-  $('#new-post-button').hide()
   $('#home-button').show()
   $('#settings-button').show()
   $('.nav-child-1').show()
-  }
 
+  // Clear or reset
+  $('form').trigger('reset')
+}
+
+/// ///////////////////////////////////////////////////////////////////////////
 
 module.exports = {
-  appReset ,
-  queueSignUp ,
+  appReset,
+  queueSignUp,
   toHome,
   toSettings,
   toNewPost
-  // , nextFromPageOne,
-  // previousFromPageTwo ,
-  // nextFromPageTwo ,
-  // previousFromPageThree ,
-  // nextFromPageThree ,
-  // previousFromPageFour ,
 }
-
-
-
-
-
-
-
-
-
-// // page 1 next
-// const nextFromPageOne = function() {
-//   $('.intro-page').hide()
-//   $('.home-page').show()
-// }
-// // page 2 pre and next
-// const previousFromPageTwo = function() {
-//   $('.home-page').hide()
-//   $('.intro-page').show()
-// }
-// const nextFromPageTwo = function() {
-//   $('.home-page').hide()
-//   $('.settings-page').show()
-// }
-// // page 3 pre and next
-// const previousFromPageThree = function() {
-//   $('.settings-page').hide()
-//   $('.home-page').show()
-// }
-// const nextFromPageThree = function() {
-//   $('.settings-page').hide()
-//   $('.new-post-page').show()
-// }
-// // page 4 pre and next
-// const previousFromPageFour = function() {
-//   $('.new-post-page').hide()
-//   $('.settings-page').show()
-// }
