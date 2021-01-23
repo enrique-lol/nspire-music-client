@@ -88,6 +88,7 @@ const newReview = function (event) {
 /// //////////////////////////////////////////
 
 const fetchAllReviews = function () {
+  $('#all-reviews-container').text('')
   api.getReviewsRequest()
     .then(ui.getAllSuccess)
     .catch(ui.getAllFail)
@@ -119,6 +120,16 @@ const dltReview = function (event) {
 
 /// //////////////////////////////////////
 
+const updateReview = function (event) {
+  event.preventDefault()
+  // console.log('userevents function')
+  const reviewData = getFormFields(event.target)
+  // const reviewId = reviewData.id
+  // console.log(reviewData)
+  // console.log(reviewId)
+  api.updateRequest(reviewData)
+}
+
 module.exports = {
   newSignUp,
   userSignIn,
@@ -129,5 +140,6 @@ module.exports = {
   newReview,
   fetchAllReviews,
   toHome,
-  dltReview
+  dltReview,
+  updateReview
 }

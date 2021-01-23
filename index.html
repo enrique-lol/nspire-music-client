@@ -11,9 +11,9 @@
       <script src="public/vendor.js" type="text/javascript" charset="utf-8" defer></script>
       <script src="public/application.js" type="text/javascript" charset="utf-8" defer></script>
 
-      <style>
+      <!-- <style>
 @import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,500;1,500&display=swap');
-</style>
+</style> -->
 
 
 
@@ -137,7 +137,7 @@
 
           <div class='signup-form-child'>
             <h2 class='app-title s-u-f-button'>New?</h2>
-          <button type='click' class='s-u-f-button'>Sign Up!</button>
+          <button type='submit' class='s-u-f-button'>Sign Up!</button>
         </div>
         </div>
 
@@ -215,6 +215,19 @@
         <button type='submit'>DELETE Review</button>
       </form>
     </div>
+
+      <div class='update-review-parent-div'>
+      <h2 class='dark-green-text'>Update a Review</h2>
+
+      <form class='update-review-form'>
+      <input type='text' name='review[id]' placeholder='Review ID'>
+      <input type='text' name='review[title]' placeholder='New Title'>
+      <input type='text' name='review[text]' placeholder='New Text'>
+      <button type='submit'>Update Review</button>
+    </form>
+
+    </div>
+
         <div class='sign-out-div'>
           <h2 class='dark-blue-font'>Sign-Out</h2>
           <button class='user-leave red-background white-text'>thank u 4 visiting</button>

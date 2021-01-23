@@ -12,7 +12,7 @@ $(() => {
   $('#log-in-form').on('submit', userEvents.userSignIn)
   $('.user-leave').on('click', userEvents.userLeaveApp)
   // below: toggle sign-up-form on landing page
-  $('.s-u-f-button').on('click', pageEvents.queueSignUp)
+  $('.s-u-f-button').on('submit', pageEvents.queueSignUp)
 
   // below: app navigation (toHome, toSettings, toNewPost)
   $('#home-button').on('click', pageEvents.toHome)
@@ -28,4 +28,6 @@ $(() => {
   $('.new-post-form').on('submit', userEvents.newReview)
   $('#temporary-get-button').on('click', userEvents.fetchAllReviews)
   $('.delete-review-form').on('submit', userEvents.dltReview)
+
+  $('.update-review-form').on('submit', userEvents.updateReview)
 })

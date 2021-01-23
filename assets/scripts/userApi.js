@@ -111,6 +111,21 @@ const dltReviewRequest = function (data) {
 }
 
 /// ///////////////////////////////////////
+/// ////////////////////////////////////////////////
+
+const updateRequest = function (reviewData) {
+  // console.log(reviewData)
+  return $.ajax({
+    url: config.apiUrl + '/reviews/' + reviewData.review.id,
+    method: 'PATCH',
+    data: reviewData,
+    headers: {
+      Authorization: 'Bearer ' + store.user.token
+    }
+  })
+}
+
+/// ////////////////////////////////////////////////
 
 module.exports = {
   signUpRequest,
@@ -121,5 +136,6 @@ module.exports = {
   changeAviRequest,
   newReview,
   getReviewsRequest,
-  dltReviewRequest
+  dltReviewRequest,
+  updateRequest
 }
