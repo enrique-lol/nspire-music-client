@@ -1,27 +1,39 @@
+## Read Me! (intro)
+nSpire Music's goal is to be the social-network where music listeners can go to review and
+discover new music. Users can pick any music project and reflect their opinion on it.
 
-1. [Download](../../archive/master.zip) this template.
-    - **Do Not Fork And Clone**
-    - Click the "Clone or Download" button and select "Download Zip".
-1. Move to the `sei/projects` directory, then unzip the template directory with
-    `unzip /Users/<user-name>/Downloads/b-t-master.zip`.
-1. Rename the template directory from `b-t-master` to
-    `<project-name>-client`.
-1. Empty [`README.md`](README.md) and fill with your own content.
-1. Replace all instances of `nSpire-music-client` with the name of
-    your project.
-    - You can search for all instances of text in Atom by pressing
-    `commant + shift + f` on Mac or `ctrl + shift + f` on WSL.
-1. Move into the new project and `git init`.
+This repository is only the front-end of the whole project. The back-end server code
+can be found here:
+[Back-End](https://github.com/enrique-lol/project2-nspire)
+
+[Deployed Front-End or client](https://enrique-lol.github.io/nspire-music-client/)
+[Deployed Back-End or server](https://account.mongodb.com/account/login)
 
 
-1. Add all of the files in your project with the command `git add --all`.
-      - **Note: This is the only time you should run this command!**
-1. Commit all of your files with the command `git commit`.
-      - Your commit title should read `Initial commit`.
-1. Install dependencies with `npm install`.
-1. Create a new repository on [github.com](https://github.com),
-    _not GitHub Enterprise_.
-1. Name the new repository with the same name used on Step 3.
-1. Follow the instructions on your new repository's setup page. For details on
-   how to push to Github, refer to the section on Github entitled "…or push an existing
-   repository from the command line." Further documentation can be found [here](https://help.github.com/articles/adding-an-existing-project-to-github-using-the-command-line/).
+### Technologies Used
+- HTML
+- JQuery
+- Javascript
+- CSS
+- Ajax
+
+
+## Development Timeline
+### Account Functionality
+Some default account settings are: signing up, in, out, and changing passwords.
+
+### Post Functionality
+Then, the next step was adding user-content features: posts. A user can create, edit the contents, or delete an entire post/review.
+
+## Problem-Solving Strategies
+I've found some trouble-shooting or problem-solving Strategies along the way: At the beginning of every function, I would console.log() in order to see if I truly made it to that function. After every API request, I would console.log() it to see what type it is and how to access data inside it.
+
+## Unsolved issues
+On the Settings and New Post page, all the contents are on the left-hand side and it does not look very pleasing.
+
+## Wireframes, User Stories
+
+[wireframes]https://imgur.com/a/VeROh56
+
+A user will be able to:
+Sign (in, up, and out), change password, add a post, edit an old post, delete a post, and see all posts made.
